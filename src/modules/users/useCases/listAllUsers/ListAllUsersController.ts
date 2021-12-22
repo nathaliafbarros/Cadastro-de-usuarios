@@ -7,6 +7,7 @@ class ListAllUsersController {
 
   handle(request: Request, response: Response): Response {
     const { user_id } = request.headers;
+    // Lembrar que para que a listAll funcione, preciso passar pelo header o id de um usuário já transformado em admin.
 
     try {
       const allUsers = this.listAllUsersUseCase.execute({
